@@ -1,6 +1,6 @@
 //Village Load Removal - BETA. NO RUN IS WR WITH THIS TIMER YET!!!
-//By CursedToast 05/23/2021
-//Last updated 05/23/2021
+//By CursedToast 05/22/2021
+//Last updated 05/22/2021
 
 state("re8", "1.0")
 {
@@ -24,6 +24,7 @@ startup
 	settings.Add("1093531362", false, "Jack Handle", "village");
 	settings.Add("808039580", false, "Winged Key", "village");
 	settings.Add("360286557", false, "Four-Winged Unborn Key", "village");
+	settings.Add("185799830", false, "Four-Winged Key", "village");
 	
 	settings.Add("castle", true, "Dimitrescu", "items");
 	settings.Add("2183898626", false, "Maroon Eye Ring", "castle");
