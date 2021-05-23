@@ -23,7 +23,6 @@ startup
 	settings.Add("1132688171", false, "Demon Crest", "village");
 	settings.Add("1093531362", false, "Jack Handle", "village");
 	settings.Add("808039580", false, "Winged Key", "village");
-	settings.Add("360286557", false, "Four-Winged Unborn Key", "village");
 	settings.Add("185799830", false, "Four-Winged Key", "village");
 	
 	settings.Add("castle", true, "Dimitrescu", "items");
@@ -52,6 +51,7 @@ startup
 	settings.Add("1042056128", false, "Breaker Box Key", "dollhouse");
 	settings.Add("988104371", false, "Relief of a Child", "dollhouse");
 	settings.Add("709500517", false, "Fuse", "dollhouse");
+	settings.Add("360286557", false, "Four-Winged Unborn Key", "dollhouse");
 	settings.Add("2563213816", false, "Leg Flask", "dollhouse");
 	
 	
