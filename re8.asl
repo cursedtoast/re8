@@ -149,7 +149,7 @@ update
 		{
 			vars.checkMaps = false;
 		}
-		else if (current.Chapter == "Chapter2_2" || "Chapter2_3" || current.Chapter == "Chapter2_4" || current.Chapter == "Chapter2_5")
+		else if (current.Chapter == "Chapter2_2" || current.Chapter == "Chapter2_3" || current.Chapter == "Chapter2_4" || current.Chapter == "Chapter2_5")
 		{
 			vars.checkMaps = true;
 		}
