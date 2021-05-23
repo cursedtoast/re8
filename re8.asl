@@ -37,6 +37,7 @@ startup
 	settings.Add("314002296", false, "Mask of Rage", "castle");
 	settings.Add("1344029762", false, "Mask of Pleasure", "castle");
 	settings.Add("3784287352", false, "Mounted Animal Skull", "castle");
+	settings.Add("3237773355", false, "Animal Skull", "castle");
 	settings.Add("2309731541", false, "Dirty Flask (Head)", "castle");
 	
 	settings.Add("dollhouse", true, "Beneviento", "items");
