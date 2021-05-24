@@ -162,7 +162,7 @@ split
 	if (settings["items"] && current.NewestItemHash != old.NewestItemHash)
 	{
 		vars.hashString = current.NewestItemHash.ToString();
-		if (current.NewestItemHash.ToString() == vars.hashString && !vars.completedSplits.Contains(vars.hashString) && settings[vars.hashString])
+		if (!vars.completedSplits.Contains(vars.hashString) && settings[vars.hashString])
 		{
 			vars.completedSplits.Add(vars.hashString);
 			return true;
