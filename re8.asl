@@ -58,6 +58,7 @@ startup
 	
 	settings.Add("fish", true, "Moreau", "items");
 	settings.Add("3720810444", false, "Arm Flask", "fish");
+	settings.Add("2844148845", false, "Boat Key", "fish");
 	settings.Add("1142718375", false, "Crank", "fish");
 	settings.Add("847933194", false, "Six-Winged Unborn Key", "fish");
 	
