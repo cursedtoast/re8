@@ -315,7 +315,7 @@ split
 			}
 		}
 	}
-	else if (current.Chapter == "Chapter3_122" && settings["chrisEnd"])
+	if (current.Chapter == "Chapter3_122" && settings["chrisEnd"])
 	{
 		if (!vars.completedSplits.Contains("chrisEnd"))
 		{
