@@ -1,6 +1,6 @@
 # Resident Evil Village Autosplitter/Load Remover
 
-Autosplits coming soon
+Autosplits and load removal for Resident Evil Village.
 
 Care to buy me a coffee?
 https://streamlabs.com/cursedtoast/tip
@@ -8,8 +8,6 @@ https://streamlabs.com/cursedtoast/tip
 # Instructions
 
 Edit your splits and change the game name to "Resident Evil Village". A message should display below "Start Timer at:" that notifies you that auto splitting and load removal is available . Click the "Activate" button.
-
-NOTE: Auto Splits are not yet available, but will be coming soon.
 
 After activating the RE8 autosplitter, click "Settings". Place a checkmark next to every split you want to use.
 
