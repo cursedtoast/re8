@@ -369,17 +369,17 @@ split
 				return true;
 			}
 		}
-	}
-	
-	if (vars.checkMaps && current.Map != old.Map)
-	{
+		
 		// Car Crash
 		if (current.Chapter == "Chapter2_1" && settings["carCrash"] && !vars.completedSplits.Contains("carCrash"))
 		{
 			vars.completedSplits.Add("carCrash");
 			return true;
 		}
-		
+	}
+	
+	if (vars.checkMaps && current.Map != old.Map)
+	{
 		// Castle Location Splits
 		if (current.Chapter == "Chapter2_2")
 		{
