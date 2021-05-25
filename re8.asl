@@ -181,7 +181,7 @@ split
 	
 	if (current.Event != old.Event)
 	{
-		if (current.Event == "ch09_0000_c10e50_00_A" && settings["roseBed"])
+		if (current.Event == "ch09_0000_c10e050_00_A" && settings["roseBed"])
 		{
 			if (!vars.completedSplits.Contains("roseBed"))
 			{
