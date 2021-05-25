@@ -115,7 +115,7 @@ init
 {
 	vars.firstCutsceneFinished = false;
 	vars.startControlFlag = false;
-	vars.checkMaps = false;
+	vars.checkMaps = true;
 	vars.completedSplits = new List<string>();
 }
 
