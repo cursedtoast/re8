@@ -190,7 +190,7 @@ split
 			}
 		}
 		
-		else if (current.Event == "ch01_000_c21e160_00_A" && settings["arrowKnee"])
+		else if (current.Event == "ch01_000_c21e160_00_A" || current.Event == "sm81_117_c21e160_01_B" && settings["arrowKnee"])
 		{
 			if (!vars.completedSplits.Contains("arrowKnee"))
 			{
