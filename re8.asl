@@ -50,9 +50,9 @@ startup
 	settings.Add("2309731541", false, "Dirty Flask (Head)", "castle");
 	
 	settings.Add("villageTwo", true, "Village 2");
+	settings.Add("808039580", false, "Winged Key", "villageTwo");
 	settings.Add("meetDuke", false, "Meet Duke Cutscene", "villageTwo");
 	settings.Add("1093531362", false, "Jack Handle", "villageTwo");
-	settings.Add("808039580", false, "Winged Key", "villageTwo");
 	settings.Add("185799830", false, "Four-Winged Key", "villageTwo");
 	
 	settings.Add("dollhouse", true, "Beneviento");
