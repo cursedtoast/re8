@@ -12,6 +12,7 @@ state("re8", "1.0")
 	string128 Map : "re8.exe", 0x0A1B1B70, 0x90, 0x14;
 	uint NewestItemHash : "re8.exe", 0xA1B1C70, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
 	string128 Event : "re8.exe", 0xA1C2268, 0xD8, 0x10, 0xB8, 0x18, 0x80, 0x80, 0x28, 0x14;
+	short EventLength : "re8.exe", 0xA1C2268, 0xD8, 0x10, 0xB8, 0x18, 0x80, 0x80, 0x28, 0x10;
 }
 
 startup
@@ -121,6 +122,7 @@ init
 
 start
 {
+
 	if (vars.firstCutsceneFinished == true && current.PauseState == 0)
 	{
 		// Reset value here so the timer actually starts
@@ -145,9 +147,12 @@ update
 	}
 	
 	// Prevent initial time bleed by starting the timer only after the paused state is also false.
-	if (current.CutsceneState == 2 && old.CutsceneState == 15 && !vars.startControlFlag)
+	if (current.Chapter == "Chapter1")
 	{
-		vars.firstCutsceneFinished = true;
+		if (current.CutsceneState == 2 && old.CutsceneState == 15 && !vars.startControlFlag)
+		{
+			vars.firstCutsceneFinished = true;
+		}
 	}
 	
 	// Chapter changed?
@@ -177,9 +182,19 @@ split
 		}
 	}
 	
+	// Car Crash
+	if (current.Chapter == "Chapter2_1" && settings["carCrash"])
+	{
+		if (!vars.completedSplits.Contains("carCrash"))
+		{
+			vars.completedSplits.Add("carCrash");
+			return true;
+		}
+	}
+	
 	// Event stuff
 	
-	if (current.Event != old.Event)
+	if (current.EventLength < 200)
 	{
 		if (current.Event == "ch09_0000_c10e050_00_A" && settings["roseBed"])
 		{
@@ -191,6 +206,7 @@ split
 		}
 		
 		else if (current.Event == "ch01_0000_c21e160_00_A" || current.Event == "sm81_117_c21e160_01_B" && settings["arrowKnee"])
+		
 		{
 			if (!vars.completedSplits.Contains("arrowKnee"))
 			{
@@ -368,13 +384,6 @@ split
 				vars.completedSplits.Add("mirandaEnd");
 				return true;
 			}
-		}
-		
-		// Car Crash
-		if (current.Chapter == "Chapter2_1" && settings["carCrash"] && !vars.completedSplits.Contains("carCrash"))
-		{
-			vars.completedSplits.Add("carCrash");
-			return true;
 		}
 	}
 	
