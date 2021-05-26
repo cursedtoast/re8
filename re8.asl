@@ -1,6 +1,6 @@
 //Village Load Removal - BETA. NO RUN IS WR WITH THIS TIMER YET!!!
-//By CursedToast 05/22/2021
-//Last updated 05/22/2021
+//By CursedToast 05/26/2021
+//Last updated 05/26/2021
 
 state("re8", "1.0")
 {
