@@ -1,4 +1,5 @@
-//Village Load Removal - BETA. NO RUN IS WR WITH THIS TIMER YET!!!
+//Village Load Remover and Auto Splitter. 
+//Official timing method for RE8 speedruns on PC.
 //By CursedToast 05/26/2021
 //Last updated 05/26/2021
 
