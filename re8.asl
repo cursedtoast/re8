@@ -1,64 +1,107 @@
-//Village Load Remover and Auto Splitter. 
-//Official timing method for RE8 speedruns on PC.
-//By CursedToast 05/26/2021
-//Last updated 05/26/2021
+/*
+--------------------------------------
+	Resident Evil Village
+	Load Remover & Auto Splitter
+	
+	Official timing method for RE8 speedruns for PC.
+	https://www.speedrun.com/re8
+	
+	By CursedToast 05.26.2021
+	Last updated 06.06.2021
+--------------------------------------
+*/
 
-state("re8", "1.0")
+
+state("re8", "WW_1.0")
 {
-	int GameState : "re8.exe", 0xA19E058, 0x40;
-	uint CutsceneState : "re8.exe", 0x0A17FAC8, 0x10;
+	byte LoadState : "re8.exe", 0xA1B1DE8, 0xE1;
 	byte PauseState : "re8.exe", 0xA19E058, 0x48;
-	string128 Chapter : "re8.exe", 0x0A1B1DE8, 0x60, 0x14;
-	string128 View : "re8.exe", 0x0A1B1DE8, 0x58, 0x14;
-	string128 Map : "re8.exe", 0x0A1B1B70, 0x90, 0x14;
-	uint NewestItemHash : "re8.exe", 0xA1B1C70, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-        string128 Event : "re8.exe", 0x0A182B38, 0x58, 0x60, 0x40, 0x80, 0x10, 0x10, 0x20, 0x28, 0x14;
+	
+	uint NewestItemHash : "re8.exe", 0xA1B29F0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	
+	string128 Chapter : "re8.exe", 0xA1B8FB0, 0x60, 0x14;
+	string128 View : "re8.exe", 0xA1B8FB0, 0x58, 0x14;
+	string128 Map : "re8.exe", 0xA1B4960, 0x90, 0x14;
+	
+    string128 Event : "re8.exe", 0xA182B38, 0x58, 0x68, 0x40, 0x30, 0x14;
+	uint CutsceneState : "re8.exe", 0x0A17FAC8, 0x10;
+}
+
+state("re8", "CeroD_1.0")
+{
+	byte LoadState : "re8.exe", 0xA1B3DE8, 0xE1;
+	byte PauseState : "re8.exe", 0xA1A0058, 0x48;
+	
+	uint NewestItemHash : "re8.exe", 0xA1B49F0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	
+	string128 Chapter : "re8.exe", 0xA1BAFB0, 0x60, 0x14;
+	string128 View : "re8.exe", 0xA1BAFB0, 0x58, 0x14;
+	string128 Map : "re8.exe", 0xA1B6960, 0x90, 0x14;
+	
+    string128 Event : "re8.exe", 0xA184B38, 0x58, 0x68, 0x40, 0x30, 0x14;
+	uint CutsceneState : "re8.exe", 0xA181AC8, 0x10;
+}
+
+state("re8", "Promo_1.0")
+{
+	byte LoadState : "re8.exe", 0xA1B2E18, 0xE1;
+	byte PauseState : "re8.exe", 0xA19F088, 0x48;
+	
+	uint NewestItemHash : "re8.exe", 0xA1B3A20, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	
+	string128 Chapter : "re8.exe", 0xA1B9FE0, 0x60, 0x14;
+	string128 View : "re8.exe", 0xA1B9FE0, 0x58, 0x14;
+	string128 Map : "re8.exe", 0xA1B5990, 0x90, 0x14;
+	
+	string128 Event : "re8.exe", 0xA183B68, 0x58, 0x68, 0x40, 0x30, 0x14;
+	uint CutsceneState : "re8.exe", 0xA180AF8, 0x10;
 }
 
 startup
 {
 	settings.Add("village", true, "Village 1");
-	settings.Add("roseBed", false, "Put Rose to Bed", "village");
-	settings.Add("carCrash", false, "Car Crash Site", "village");
+	settings.Add("c10e050_00", false, "Put Rose to Bed", "village");
+	settings.Add("c21e000_00", false, "Car Crash Site", "village");
 	settings.Add("1664342338", false, "Bolt Cutters", "village");
 	settings.Add("arrowKnee", false, "Arrow to the Knee", "village");
 	settings.Add("3619364444", false, "Maiden Crest", "village");
 	settings.Add("3219462766", false, "Screwdriver", "village");
 	settings.Add("1132688171", false, "Demon Crest", "village");
-	settings.Add("meetWalterWhite", false, "Meet Heisenberg Cutscene", "village");
+	settings.Add("c21e510_00", false, "Meet Heisenberg Cutscene", "village");
 	
 	settings.Add("castle", true, "Castle");
-	settings.Add("reachedCastle", false, "Reached Castle", "castle");
+	settings.Add("st11_010_EntranceHallB_In2F", false, "Reached Castle", "castle");
 	settings.Add("2183898626", false, "Maroon Eye Ring", "castle");
 	settings.Add("1787578325", false, "Maroon Eye", "castle");
-	settings.Add("reachedPrison", false, "Reached Prison", "castle");
+	settings.Add("st11_066_PrisonB_In1B", false, "Reached Prison", "castle");
 	settings.Add("2685023068", false, "Sanguis Virginis (Wine Bottle)", "castle");
 	settings.Add("1354786552", false, "Courtyard Key", "castle");
-	settings.Add("reachedCourtyard", false, "Reached Courtyard", "castle");
-	settings.Add("reachedDistillery", false, "Reached Distillery", "castle");
+	settings.Add("st11_092_Courtyard_Out", false, "Reached Courtyard", "castle");
+	settings.Add("st11_074_BasementA_In1B", false, "Reached Distillery", "castle");
 	settings.Add("1738775830", false, "Dimitrescu's' Key", "castle");
 	settings.Add("418018598", false, "Iron Insignia Key", "castle");
 	settings.Add("3513834249", false, "Mask of Sorrow", "castle");
-	settings.Add("ethanHand", false, "Ethan Loses Hand Cutscene", "castle");
+	settings.Add("c22e550_00", false, "Ethan Loses Hand Cutscene", "castle");
 	settings.Add("2365661828", false, "Mask of Joy", "castle");
-	settings.Add("reachedRoof", false, "Reached Roof", "castle");
+	settings.Add("st11_094_Roof_Out", false, "Reached Roof", "castle");
 	settings.Add("314002296", false, "Mask of Rage", "castle");
 	settings.Add("1344029762", false, "Mask of Pleasure", "castle");
 	settings.Add("3784287352", false, "Mounted Animal Skull", "castle");
 	settings.Add("3237773355", false, "Animal Skull", "castle");
-	settings.Add("vampMommyStart", false, "Lady D. Boss Start", "castle");
-	settings.Add("vampMommyDies", false, "Lady D. Defeated", "castle");
+	settings.Add("c22e720_00", false, "Lady D. Boss Start", "castle");
+	settings.Add("c22e800_00", false, "Lady D. Defeated", "castle");
 	settings.Add("2309731541", false, "Dirty Flask (Head)", "castle");
 	
 	settings.Add("villageTwo", true, "Village 2");
 	settings.Add("808039580", false, "Winged Key", "villageTwo");
-	settings.Add("meetDuke", false, "Meet Duke Cutscene", "villageTwo");
+	settings.Add("c26e200_00", false, "Meet Duke Cutscene", "villageTwo");
 	settings.Add("1093531362", false, "Jack Handle", "villageTwo");
 	settings.Add("185799830", false, "Four-Winged Key", "villageTwo");
+	settings.Add("c26e250_00", false, "Meet Duke Again Cutscene (after key)", "villageTwo");
 	
 	settings.Add("dollhouse", true, "Beneviento");
-	settings.Add("miaGraveyard", false, "Mia Graveyard Cutscene", "dollhouse");
-	settings.Add("reachedBeneviento", false, "Reached Beneviento House", "dollhouse");
+	settings.Add("c23e050_00", false, "Mia Graveyard Cutscene", "dollhouse");
+	settings.Add("st14_001_Hall_In1F", false, "Reached Beneviento House", "dollhouse");
 	settings.Add("2896087978", false, "Blood Covered Ring", "dollhouse");
 	settings.Add("2573570207", false, "Silver Key", "dollhouse");
 	settings.Add("3856576850", false, "Winding Key", "dollhouse");
@@ -70,66 +113,79 @@ startup
 	settings.Add("1042056128", false, "Breaker Box Key", "dollhouse");
 	settings.Add("988104371", false, "Relief of a Child", "dollhouse");
 	settings.Add("709500517", false, "Fuse", "dollhouse");
-	settings.Add("escapedBaby", false, "Escaped Baby", "dollhouse");
+	settings.Add("c23e660_00", false, "Escaped Baby", "dollhouse");
 	settings.Add("360286557", false, "Four-Winged Unborn Key", "dollhouse");
 	settings.Add("2563213816", false, "Leg Flask", "dollhouse");
 	
 	settings.Add("fish", true, "Moreau");
-	settings.Add("reachedWerewolf", false, "Werewolf Cutscene", "fish");
+	settings.Add("c26e500_00", false, "Werewolf Cutscene", "fish");
 	settings.Add("3720810444", false, "Arm Flask", "fish");
 	settings.Add("2844148845", false, "Boat Key", "fish");
-	settings.Add("chrisFish", false, "Meet Chris Cutscene", "fish");
+	settings.Add("c24e200_02", false, "Meet Chris Cutscene", "fish");
 	settings.Add("1142718375", false, "Crank", "fish");
-	settings.Add("theBest", false, "Moreau (the best) Defeated", "fish");
+	settings.Add("c24e810_00", false, "Moreau (the best) Defeated", "fish");
 	settings.Add("847933194", false, "Six-Winged Unborn Key", "fish");
 	
 	settings.Add("walterwhite", true, "Heisenberg");
 	settings.Add("719654765", false, "Torso Flask", "walterwhite");
 	settings.Add("158765264", false, "Giant's Chalice", "walterwhite");
-	settings.Add("meetHeisenbergFactory", false, "Meet Heisenberg Cutscene", "walterwhite");
+	settings.Add("c25e210_00", false, "Meet Heisenberg Cutscene", "walterwhite");
 	settings.Add("propellerOne", false, "Escaped Propeller Man (First Time)", "walterwhite");
-	settings.Add("castingMachine", false, "Reached Casting Machine Room (First Time)", "walterwhite");
+	settings.Add("st15_060_CastingMachineRoom_In3B", false, "Reached Casting Machine Room (First Time)", "walterwhite");
 	settings.Add("1911895058", false, "Relief Mold", "walterwhite");
 	settings.Add("1152567186", false, "Relief of a Horse", "walterwhite");
 	settings.Add("propellerTwo", false, "Escaped Propeller Man (Second Time)", "walterwhite");
 	settings.Add("1629499072", false, "Cog Mold", "walterwhite");
 	settings.Add("1858058345", false, "Large Cog", "walterwhite");
-	settings.Add("bigFan", false, "Reached Big Fan (that will kill you)", "walterwhite");
+	settings.Add("st15_030_BigFanArea_In2B", false, "Reached Big Fan (that will kill you)", "walterwhite");
 	settings.Add("1876186812", false, "Key Mold", "walterwhite");
 	settings.Add("4041096499", false, "Heisenberg's Key", "walterwhite");
 	settings.Add("controlRoom", false, "Reached Control Room (after killing Propeller Man)", "walterwhite");
-	settings.Add("tankElevator", false, "Got on Tank", "walterwhite");
+	settings.Add("c25e710_00", false, "Got on Tank", "walterwhite");
 	
 	settings.Add("chris", true, "Chris Section");
 	settings.Add("chrisStart", false, "Chris Start", "chris");
-	settings.Add("reachedTarget", false, "'Reached Target Location'", "chris");
-	settings.Add("uriasChrisReached", false, "Urias Start", "chris");
-	settings.Add("reachedMega", false, "Reached Megamycete", "chris");
-	settings.Add("chrisEnd", false, "Chris End", "chris");
+	settings.Add("c31e300_00", false, "'Reached Target Location'", "chris");
+	settings.Add("c31e500_01", false, "Urias Start", "chris");
+	settings.Add("c31e600_00", false, "Reached Megamycete", "chris");
+	settings.Add("c31e800_00", false, "Chris End", "chris");
 	
 	settings.Add("finale", true, "Finale");
-	settings.Add("mirandaStart", false, "Miranda Start", "finale");
-	settings.Add("mirandaEnd", false, "Miranda Defeated (END)", "finale");
+	settings.Add("c32e150_00", false, "Miranda Start", "finale");
+	settings.Add("enforced", false, "Miranda End - ENFORCED SPLIT!", "finale");
 }
 
 init
 {
 	vars.firstCutsceneFinished = false;
 	vars.startControlFlag = false;
-	vars.checkMaps = true;
 	vars.completedSplits = new List<string>();
+	vars.arrowKnee = false;
+	vars.chrisStart = false;
+	
+	switch (modules.First().ModuleMemorySize)
+	{
+		case (628158464):
+			version = "CeroD_1.0";
+			break;
+		case (620384256):
+			version = "Promo_1.0";
+			break;
+		case (640962560):
+		default:
+			version = "WW_1.0";
+			break;
+	}
 }
 
 start
 {
-
-	if (vars.firstCutsceneFinished == true && current.PauseState == 0)
+	// Start the timer
+	if (vars.firstCutsceneFinished && current.PauseState == 0)
 	{
-		// Reset value here so the timer actually starts
+		// Reset values here so the timer actually starts
 		vars.firstCutsceneFinished = false;
 		vars.startControlFlag = true;
-		
-		vars.checkMaps = true;
 		
 		// Start the timer
 		return true;
@@ -141,12 +197,13 @@ update
 	// Reset variables when the timer is reset.
 	if (timer.CurrentPhase == TimerPhase.NotRunning)
 	{
-		vars.checkMaps = true;
 		vars.startControlFlag = false;
 		vars.completedSplits.Clear();
+		vars.arrowKnee = false;
+		vars.chrisStart = false;
 	}
-	
-	// Prevent initial time bleed by starting the timer only after the paused state is also false.
+
+	// Prevent initial time bleed by starting the timer only after the cutscene with Mia on the sofa (player gains control of Ethan)
 	if (current.Chapter == "Chapter1")
 	{
 		if (current.CutsceneState == 2 && old.CutsceneState == 15 && !vars.startControlFlag)
@@ -155,323 +212,75 @@ update
 		}
 	}
 	
-	// Chapter changed?
-	if (current.Chapter != old.Chapter)
-	{	
-		// Should map checks process or be disabled to save unnecessary conditional checks?
-		if (current.Chapter == "Chapter2_6" || current.Chapter == "Chapter2_7")
-		{
-			vars.checkMaps = false;
-		}
-		else if (current.Chapter == "Chapter2_2" || current.Chapter == "Chapter2_3" || current.Chapter == "Chapter2_4" || current.Chapter == "Chapter2_5")
-		{
-			vars.checkMaps = true;
-		}
-	}
+	// Uncomment debug information in the event of an update.
+	// print(modules.First().ModuleMemorySize.ToString());
 }
 
 split
 {
+	// End Split is enforced because the timer won't stop for the rest of the run.
+	if (current.Chapter == "Chapter3_2" && current.Event != old.Event)
+	{
+		if (current.Event == "c32e400_00")
+		{
+			return true;
+		}
+	}
+	
+	// Item splits
 	if (current.NewestItemHash != old.NewestItemHash)
 	{
 		vars.hashString = current.NewestItemHash.ToString();
-		if (!vars.completedSplits.Contains(vars.hashString) && settings[vars.hashString])
+		if (settings[vars.hashString] && !vars.completedSplits.Contains(vars.hashString))
 		{
 			vars.completedSplits.Add(vars.hashString);
 			return true;
 		}
 	}
 	
-	// Car Crash
-	if (current.Chapter == "Chapter2_1" && settings["carCrash"])
+	// Event splits
+	if (current.Event != old.Event)
 	{
-		if (!vars.completedSplits.Contains("carCrash"))
+		// Lycan Defense
+		if (settings["arrowKnee"] && !vars.arrowKnee)
 		{
-			vars.completedSplits.Add("carCrash");
+			if (current.Event == "c21e160_02" || current.Event == "c21e160_00" || current.Event == "c21e160_01")
+			{
+				vars.arrowKnee = true;
+				return true;
+			}
+		}
+			
+		// Chris Start
+		if (settings["chrisStart"] && !vars.chrisStart)
+		{
+			if (current.Event == "c31e000_00" || current.Event == "c31e100_04")
+			{
+				vars.chrisStart = true;
+				return true;
+			}
+		}
+
+		// All other events without variant IDs
+		if (settings[current.Event] && !vars.completedSplits.Contains(current.Event))
+		{
+			vars.completedSplits.Add(current.Event);
 			return true;
 		}
 	}
 	
-	// Event stuff
-	
-	if (current.Event != old.Event)
+	// Map splits
+	if (current.Map != old.Map)
 	{
-		if (current.Event == "ch09_0000_c10e050_00_A" && settings["roseBed"])
+		if (settings[current.Map] && !vars.completedSplits.Contains(current.Map))
 		{
-			if (!vars.completedSplits.Contains("roseBed"))
-			{
-				vars.completedSplits.Add("roseBed");
-				return true;
-			}
+			vars.completedSplits.Add(current.Map);
+			return true;
 		}
 		
-		else if (current.Event == "ch01_0000_c21e160_02_A" && settings["arrowKnee"] || current.Event == "ch01_0000_c21e160_00_A" && settings["arrowKnee"] || current.Event == "sm81_117_c21e160_01_B" && settings["arrowKnee"])
-		
-		{
-			if (!vars.completedSplits.Contains("arrowKnee"))
-			{
-				vars.completedSplits.Add("arrowKnee");
-				return true;
-			}
-		}
-		
-		if (current.Map == "st11_032_Chapel_In2F" && settings["vampMommyStart"])
-		{
-			if (!vars.completedSplits.Contains("vampMommyStart"))
-			{
-				vars.completedSplits.Add("vampMommyStart");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "sm84_196_c21e510_00_A" && settings["meetWalterWhite"])
-		{
-			if (!vars.completedSplits.Contains("meetWalterWhite"))
-			{
-				vars.completedSplits.Add("meetWalterWhite");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "it06_029_c22e550_00_A" && settings["ethanHand"])
-		{
-			if (!vars.completedSplits.Contains("ethanHand"))
-			{
-				vars.completedSplits.Add("ethanHand");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "ch02_1100_c22e800_00_A" && settings["vampMommyDies"])
-		{
-			if (!vars.completedSplits.Contains("vampMommyDies"))
-			{
-				vars.completedSplits.Add("vampMommyDies");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "ch01_0000_c26e200_00_A" && settings["meetDuke"])
-		{
-			if (!vars.completedSplits.Contains("meetDuke"))
-			{
-				vars.completedSplits.Add("meetDuke");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "ch01_0000_c23e050_00_A" && settings["miaGraveyard"])
-		{
-			if (!vars.completedSplits.Contains("miaGraveyard"))
-			{
-				vars.completedSplits.Add("miaGraveyard");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "ch05_3000_c23e660_00_A" && settings["escapedBaby"])
-		{
-			if (!vars.completedSplits.Contains("escapedBaby"))
-			{
-				vars.completedSplits.Add("escapedBaby");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "ch13_3000_c26e500_00_A" && settings["reachedWerewolf"])
-		{
-			if (!vars.completedSplits.Contains("reachedWerewolf"))
-			{
-				vars.completedSplits.Add("reachedWerewolf");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "sm84_159_c24e200_02_A" && settings["chrisFish"])
-		{
-			if (!vars.completedSplits.Contains("chrisFish"))
-			{
-				vars.completedSplits.Add("chrisFish");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "ch04_3500_c24e810_00_A" && settings["theBest"])
-		{
-			if (!vars.completedSplits.Contains("theBest"))
-			{
-				vars.completedSplits.Add("theBest");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "it06_008_c25e210_00_A" && settings["meetHeisenbergFactory"])
-		{
-			if (!vars.completedSplits.Contains("meetHeisenbergFactory"))
-			{
-				vars.completedSplits.Add("meetHeisenbergFactory");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "sm84_015_c25e710_00_A" && settings["tankElevator"])
-		{
-			if (!vars.completedSplits.Contains("tankElevator"))
-			{
-				vars.completedSplits.Add("tankElevator");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "sm84_141_c31e000_00_A" && settings["chrisStart"])
-		{
-			if (!vars.completedSplits.Contains("chrisStart"))
-			{
-				vars.completedSplits.Add("chrisStart");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "ch01_0000_c31e300_00_A" && settings["reachedTarget"])
-		{
-			if (!vars.completedSplits.Contains("reachedTarget"))
-			{
-				vars.completedSplits.Add("reachedTarget");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "sm84_200_c31e500_01_C" && settings["uriasChrisReached"])
-		{
-			if (!vars.completedSplits.Contains("uriasChrisReached"))
-			{
-				vars.completedSplits.Add("uriasChrisReached");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "it06_026_c31e600_00_A" && settings["reachedMega"])
-		{
-			if (!vars.completedSplits.Contains("reachedMega"))
-			{
-				vars.completedSplits.Add("reachedMega");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "sm84_187_c31e800_00_A" && settings["chrisEnd"])
-		{
-			if (!vars.completedSplits.Contains("chrisEnd"))
-			{
-				vars.completedSplits.Add("chrisEnd");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "sm84_200_c32e150_00_D" && settings["mirandaStart"])
-		{
-			if (!vars.completedSplits.Contains("mirandaStart"))
-			{
-				vars.completedSplits.Add("mirandaStart");
-				return true;
-			}
-		}
-		
-		else if (current.Event == "ch01_0000_c32e400_00_A" && settings["mirandaEnd"])
-		{
-			if (!vars.completedSplits.Contains("mirandaEnd"))
-			{
-				vars.completedSplits.Add("mirandaEnd");
-				return true;
-			}
-		}
-	}
-	
-	if (vars.checkMaps && current.Map != old.Map)
-	{
-		// Castle Location Splits
-		if (current.Chapter == "Chapter2_2")
-		{
-			if (current.Map == "st11_010_EntranceHallB_In2F" && settings["reachedCastle"])
-			{
-				if (!vars.completedSplits.Contains("reachedCastle"))
-				{
-					vars.completedSplits.Add("reachedCastle");
-					return true;
-				}
-			}
-			
-			if (current.Map == "st11_066_PrisonB_In1B" && settings["reachedPrison"])
-			{
-				if (!vars.completedSplits.Contains("reachedPrison"))
-				{
-					vars.completedSplits.Add("reachedPrison");
-					return true;
-				}
-			}
-			
-			if (current.Map == "st11_092_Courtyard_Out" && settings["reachedCourtyard"])
-			{
-				if (!vars.completedSplits.Contains("reachedCourtyard"))
-				{
-					vars.completedSplits.Add("reachedCourtyard");
-					return true;
-				}
-			}
-			
-			if (current.Map == "st11_074_BasementA_In1B" && settings["reachedDistillery"])
-			{
-				if (!vars.completedSplits.Contains("reachedDistillery"))
-				{
-					vars.completedSplits.Add("reachedDistillery");
-					return true;
-				}
-			}
-			
-			if (current.Map == "st11_094_Roof_Out" && settings["reachedRoof"])
-			{
-				if (!vars.completedSplits.Contains("reachedRoof"))
-				{
-					vars.completedSplits.Add("reachedRoof");
-					return true;
-				}
-			}
-		}
-		
-		// Dollhouse Location Splits
-		else if (current.Chapter == "Chapter2_3")
-		{
-			if (current.Map == "st14_001_Hall_In1F" && settings["reachedBeneviento"])
-			{
-				if (!vars.completedSplits.Contains("reachedBeneviento"))
-				{
-					vars.completedSplits.Add("reachedBeneviento");
-					return true;
-				}
-			}
-		}
-		
-		// Heisenberg Location Splits
+		// Propellerman Splits
 		else if (current.Chapter == "Chapter2_5")
 		{
-			if (current.Map == "st15_060_CastingMachineRoom_In3B" && settings["castingMachine"])
-			{
-				if (!vars.completedSplits.Contains("castingMachine"))
-				{
-					vars.completedSplits.Add("castingMachine");
-					return true;
-				}
-			}
-			
-			if (current.Map == "st15_030_BigFanArea_In2B" && settings["bigFan"])
-			{
-				if (!vars.completedSplits.Contains("bigFan"))
-				{
-					vars.completedSplits.Add("bigFan");
-					return true;
-				}
-			}
-			
 			if (old.Map == "st15_010_Passage_In1B" && current.Map == "st15_074_ScrapArea_In5B" && settings["propellerOne"])
 			{
 				if (!vars.completedSplits.Contains("propellerOne"))
@@ -504,9 +313,8 @@ split
 
 isLoading
 {
-	return current.CutsceneState == 15 || current.PauseState == 1 || current.GameState == 2;
+	return current.CutsceneState == 15 || current.PauseState == 1 || current.LoadState != 0;
 }
-
 
 reset
 {
