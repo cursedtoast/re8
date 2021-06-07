@@ -152,7 +152,7 @@ startup
 	
 	settings.Add("finale", true, "Finale");
 	settings.Add("c32e150_00", false, "Miranda Start", "finale");
-	settings.Add("enforced", false, "Miranda End - ENFORCED SPLIT!", "finale");
+	settings.Add("c32e400_00", false, "Miranda End", "finale");
 }
 
 init
@@ -218,15 +218,6 @@ update
 
 split
 {
-	// End Split is enforced because the timer won't stop for the rest of the run.
-	if (current.Chapter == "Chapter3_2" && current.Event != old.Event)
-	{
-		if (current.Event == "c32e400_00")
-		{
-			return true;
-		}
-	}
-	
 	// Item splits
 	if (current.NewestItemHash != old.NewestItemHash)
 	{
