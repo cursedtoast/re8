@@ -235,7 +235,7 @@ split
 		// Lycan Defense
 		if (settings["arrowKnee"] && !vars.arrowKnee)
 		{
-			if (current.Event == "c21e160_02" || current.Event == "c21e160_00" || current.Event == "c21e160_01")
+			if (current.Event == "c21e160_02" || current.Event == "c21e160_00" || current.Event == "c21e160_01" || current.Event == "c21e160_03")
 			{
 				vars.arrowKnee = true;
 				return true;
