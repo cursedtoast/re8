@@ -7,10 +7,24 @@
 	https://www.speedrun.com/re8
 	
 	By CursedToast 05.26.2021
-	Last updated 06.06.2021
+	Last updated 07.20.2021
 --------------------------------------
 */
 
+state("re8", "WW_1.1")
+{
+	byte LoadState : "re8.exe", 0xA069998, 0xE1;
+	byte PauseState : "re8.exe", 0xA055318, 0x48;
+	
+	uint NewestItemHash : "re8.exe", 0xA06A5B8, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	
+	string128 Chapter : "re8.exe", 0xA069998, 0x60, 0x14;
+	string128 View : "re8.exe", 0xA069998, 0x58, 0x14;
+	string128 Map : "re8.exe", 0xA069720, 0x90, 0x14;
+	
+    string128 Event : "re8.exe", 0xA03A2B8, 0x58, 0x68, 0x40, 0x30, 0x14;
+	uint CutsceneState : "re8.exe", 0xA02D618, 0x10;
+}
 
 state("re8", "WW_1.0")
 {
@@ -23,7 +37,7 @@ state("re8", "WW_1.0")
 	string128 View : "re8.exe", 0xA1B8FB0, 0x58, 0x14;
 	string128 Map : "re8.exe", 0xA1B4960, 0x90, 0x14;
 	
-    	string128 Event : "re8.exe", 0xA182B38, 0x58, 0x68, 0x40, 0x30, 0x14;
+    string128 Event : "re8.exe", 0xA182B38, 0x58, 0x68, 0x40, 0x30, 0x14;
 	uint CutsceneState : "re8.exe", 0x0A17FAC8, 0x10;
 }
 
@@ -38,7 +52,7 @@ state("re8", "CeroD_1.0")
 	string128 View : "re8.exe", 0xA1BAFB0, 0x58, 0x14;
 	string128 Map : "re8.exe", 0xA1B6960, 0x90, 0x14;
 	
-    	string128 Event : "re8.exe", 0xA184B38, 0x58, 0x68, 0x40, 0x30, 0x14;
+    string128 Event : "re8.exe", 0xA184B38, 0x58, 0x68, 0x40, 0x30, 0x14;
 	uint CutsceneState : "re8.exe", 0xA181AC8, 0x10;
 }
 
@@ -171,6 +185,9 @@ init
 		case (620384256):
 			version = "Promo_1.0";
 			break;
+		case (620728320):
+			version = "WW_1.1";
+			break;
 		case (640962560):
 		default:
 			version = "WW_1.0";
@@ -213,7 +230,7 @@ update
 	}
 	
 	// Uncomment debug information in the event of an update.
-	// print(modules.First().ModuleMemorySize.ToString());
+	print(modules.First().ModuleMemorySize.ToString());
 }
 
 split
