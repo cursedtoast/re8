@@ -206,6 +206,9 @@ init
 		case (629379072):
 			version = "WW_1.2";
 			break;
+		case (624750592):
+			version = "ww_1.2";
+			break;
 		case (640962560):
 		default:
 			version = "WW_1.0";
