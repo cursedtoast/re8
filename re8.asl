@@ -7,9 +7,24 @@
 	https://www.speedrun.com/re8
 	
 	By CursedToast 05.26.2021
-	Last updated 08.11.2021
+	Last updated 10.12.2021
 --------------------------------------
 */
+
+state("re8", "WW_1.3")
+{
+	byte LoadState : "re8.exe", 0xA06B968, 0xE1;
+	byte PauseState : "re8.exe", 0xA0572E8, 0x48;
+	
+	uint NewestItemHash : "re8.exe", 0xA06B7F0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	
+	string128 Chapter : "re8.exe", 0xA06B968, 0x60, 0x14;
+	string128 View : "re8.exe", 0xA06B968, 0x58, 0x14;
+	string128 Map : "re8.exe", 0xA06B6F0, 0x90, 0x14;
+	
+    string128 Event : "re8.exe", 0xA03C298, 0x58, 0x68, 0x40, 0x30, 0x14;
+	uint CutsceneState : "re8.exe", 0xA02F5E8, 0x10;
+}
 
 state("re8", "WW_1.2")
 {
@@ -208,6 +223,9 @@ init
 			break;
 		case (624750592):
 			version = "ww_1.2";
+			break;
+		case (639950848):
+			version = "ww_1.3";
 			break;
 		case (640962560):
 		default:
