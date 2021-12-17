@@ -7,9 +7,24 @@
 	https://www.speedrun.com/re8
 	
 	By CursedToast 05.26.2021
-	Last updated 10.12.2021
+	Last updated 12.17.2021
 --------------------------------------
 */
+
+state("re8", "WW_1.4")
+{
+	byte LoadState : "re8.exe", 0xA06CA58, 0xE1;
+	byte PauseState : "re8.exe", 0xA0583D8, 0x48;
+	
+	uint NewestItemHash : "re8.exe", 0xA06C8E0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	
+	string128 Chapter : "re8.exe", 0xA06CA58, 0x60, 0x14;
+	string128 View : "re8.exe", 0xA06CA58, 0x58, 0x14;
+	string128 Map : "re8.exe", 0xA06C7E0, 0x90, 0x14;
+	
+    string128 Event : "re8.exe", 0xA03D388, 0x58, 0x68, 0x40, 0x30, 0x14;
+	uint CutsceneState : "re8.exe", 0xA0306D8, 0x10;
+}
 
 state("re8", "WW_1.3")
 {
@@ -227,6 +242,9 @@ init
 		case (639950848):
 			version = "ww_1.3";
 			break;
+		case (646139904):
+			version = "ww_1.4";
+			break;
 		case (640962560):
 		default:
 			version = "WW_1.0";
@@ -269,7 +287,7 @@ update
 	}
 	
 	// Uncomment debug information in the event of an update.
-	//print(modules.First().ModuleMemorySize.ToString());
+	print(modules.First().ModuleMemorySize.ToString());
 }
 
 split
