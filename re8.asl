@@ -287,7 +287,7 @@ update
 	}
 	
 	// Uncomment debug information in the event of an update.
-	print(modules.First().ModuleMemorySize.ToString());
+	//print(modules.First().ModuleMemorySize.ToString());
 }
 
 split
