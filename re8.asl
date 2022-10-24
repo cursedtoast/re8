@@ -15,12 +15,12 @@
 state("re8", "WW_1.5")
 {
 	byte LoadState		:	0xC9B79A8, 0xE1;
-	byte PauseState		:	0xCA07648, 0x48;								//Same pointer as View & same offsets as old updates
-	uint CutsceneState	:	0xC9B71D8, 0x10;								//15 in cutscene, 2 not in cutscene
-	uint NewestItemHash	:	0xC9B7810, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;  //Find ammo count and pointerscan with 4C as final offset. Find closest pointers and then change them to the ones to the left of here from old updates
-	string128 Chapter	:	0xC9B79A8, 0x60, 0x14;							//Same pointer as View & same offsets as old updates
-	string128 View		:	0xC9B79A8, 0x58, 0x14;							//AOB Scan 4D 00 61 00 78 00 48 00 44 00 52 00 42 00 72 00 69 00 67 00 68 00 74 00 6E 00 65 00 73 00 73 when in Ethans house, then move address forward until it says MainMenu
-	string128 Map		:	0xC9B7708, 0x90, 0x14;							//First map is st01_000_Home1FGarden_00 (UTF-16 String), same offsets as old updates
+	byte PauseState		:	0xCA07648, 0x48;					//Same pointer as View & same offsets as old updates
+	uint CutsceneState	:	0xC9B71D8, 0x10;					//15 in cutscene, 2 not in cutscene
+	uint NewestItemHash	:	0xC9B7810, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;  	//Find ammo count and pointerscan with 4C as final offset. Find closest pointers and then change them to the ones to the left of here from old updates
+	string128 Chapter	:	0xC9B79A8, 0x60, 0x14;					//Same pointer as View & same offsets as old updates
+	string128 View		:	0xC9B79A8, 0x58, 0x14;					//AOB Scan 4D 00 61 00 78 00 48 00 44 00 52 00 42 00 72 00 69 00 67 00 68 00 74 00 6E 00 65 00 73 00 73 when in Ethans house, then move address forward until it says MainMenu
+	string128 Map		:	0xC9B7708, 0x90, 0x14;					//First map is st01_000_Home1FGarden_00 (UTF-16 String), same offsets as old updates
 	string128 Event		:	0xC9B7728, 0x58, 0x68, 0x40, 0x30, 0x14;		//AOB Scan 63 00 31 00 30 00 65 00 30 00 30 00 31 00 5F 00 30 00 30 00 00 00 00 00 00 00 00 00 and pointer scan the one closest to the top with same offsets as old updates
 }
 
