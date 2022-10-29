@@ -264,7 +264,6 @@ startup
 	settings.Add("3959031061", false, "Fuse Map");
 	settings.Add("2553722918", false, "Fuse");
 	settings.Add("c102e050_00", false, "Down The Elevator");
-	settings.Add("st24_051_LargeDollWorkshop_In1", false, "Reach Large Doll Workshop");
 	settings.Add("c102e070_00", false, "Reach Large Bedroom");
 	settings.Add("c102e100_00", false, "Escape Large Mia Doll");
 	settings.Add("954750291", false, "Drawer Key");
