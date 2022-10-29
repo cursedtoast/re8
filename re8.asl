@@ -268,7 +268,6 @@ startup
 	settings.Add("c102e070_00", false, "Reach Large Bedroom");
 	settings.Add("c102e100_00", false, "Escape Large Mia Doll");
 	settings.Add("954750291", false, "Drawer Key");
-	settings.Add("c102e230_00", false, "Eveline Fight Start");
 	settings.Add("4283333959", false, "RW-Variant Flask 4");
 	settings.Add("c102e250_00", false, "Beat Eveline");
 	
