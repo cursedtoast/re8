@@ -240,7 +240,6 @@ startup
 	settings.Add("4184743477", false, "Bronze Mask");
 	settings.Add("115291557", false, "RW-Variant Flask 2");
 	settings.Add("1467618523", false, "Monocular Key");
-	settings.Add("st21_076_BasementB_In1B", false, "Reach Basement");
 	settings.Add("298520404", false, "Silver Mask");
 	settings.Add("2307002485", false, "Snake Painting");
 	settings.Add("3483404595", false, "Triocular Key");
