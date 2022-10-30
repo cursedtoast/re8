@@ -16,6 +16,7 @@ state("re8", "WW_1.5")
 {
 	byte LoadState		:	0xC9B79A8, 0xE1;								//Same pointer as View & same offsets as old updates
 	byte PauseState		:	0xCA07648, 0x48;								//Does not change until you gain control of Ethan again
+	byte TimeBleed		:	0xC9B79A0, 0x84;								//Fixes Some Timebleed in Shadows of Rose. 2 in game 3 during cutscene after Eveline in Ethans House
 	uint CutsceneState	:	0xC9B71D8, 0x10;								//15 in cutscene, 2 not in cutscene
 	uint NewestItemHash	:	0xC9B7810, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;  //Find ammo count and pointerscan with 4C as final offset. Find closest pointers and then change them to the ones to the left of here from old updates
 	string128 Chapter	:	0xC9B79A8, 0x60, 0x14;							//Same pointer as View & same offsets as old updates
@@ -448,10 +449,10 @@ split
 
 isLoading
 {
-	return current.CutsceneState == 15 || current.PauseState == 1 || current.LoadState != 0;
+	return current.CutsceneState == 15 || current.PauseState == 1 || current.LoadState != 0 || current.TimeBleed == 3;
 }
 
 reset
 {
-	return current.View == "MainMenu" || current.Event == "c100e000_00";
+	return current.View == "MainMenu" || current.View == "DLCRoot_GE/DLC05/DLC05_2/Chapter10MainMenu";
 }
