@@ -449,7 +449,11 @@ split
 
 isLoading
 {
-	return current.CutsceneState == 15 || current.PauseState == 1 || current.LoadState != 0 || current.TimeBleed == 3;
+	if(current.View == "DLCRoot_GE/DLC05"){
+		return current.CutsceneState == 15 || current.PauseState == 1 || current.LoadState != 0 || current.TimeBleed == 3;
+	}
+	
+	else return current.CutsceneState == 15 || current.PauseState == 1 || current.LoadState != 0;
 }
 
 reset
