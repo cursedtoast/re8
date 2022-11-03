@@ -449,7 +449,7 @@ split
 
 isLoading
 {
-	if(current.View == "DLCRoot_GE/DLC05"){
+	if(settings["Rose"]){
 		return current.CutsceneState == 15 || current.PauseState == 1 || current.LoadState != 0 || current.TimeBleed == 3;
 	}
 	
