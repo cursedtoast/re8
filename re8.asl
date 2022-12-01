@@ -6,11 +6,24 @@
 	Official timing method for RE8 speedruns for PC.
 	https://www.speedrun.com/re8
 	
-	Main game script & pointers by CursedToast 05.26.2021
-	Shadows of Rose script & WW_1.5 by TheDementedSalad 29/10/2022
+	Scipt & offsets pre WW_1.5 by CursedToast 05.26.2021
+	SoR script & offsets post WW_1.5 by TheDementedSalad 01/12/2022
 	Maintained by TheDementedSalad
 --------------------------------------
 */
+
+state("re8", "WW_1.7")
+{
+	byte LoadState		:	0xC9AF9B8, 0xE1;									//All +9000 base address from 1.6
+	byte PauseState		:	0xC9FF658, 0x48;								
+	byte TimeBleed		:	0xC9AF9B0, 0x84;								
+	uint CutsceneState	:	0xC9AF1E8, 0x10;								
+	uint NewestItemHash	:	0xC9AF820, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	string128 Chapter	:	0xC9AF9B8, 0x60, 0x14;							
+	string128 View		:	0xC9AF9B8, 0x58, 0x14;							
+	string128 Map		:	0xC9AF718, 0x90, 0x14;							
+	string128 Event		:	0xC9AF738, 0x58, 0x68, 0x40, 0x30, 0x14;		
+}
 
 state("re8", "WW_1.6")
 {
@@ -35,7 +48,7 @@ state("re8", "WW_1.5")
 	string128 Chapter	:	0xC9B79A8, 0x60, 0x14;							//Same pointer as View & same offsets as old updates
 	string128 View		:	0xC9B79A8, 0x58, 0x14;							//AOB Scan 4D 00 61 00 78 00 48 00 44 00 52 00 42 00 72 00 69 00 67 00 68 00 74 00 6E 00 65 00 73 00 73 when on the main menu, then move address forward until it says MainMenu
 	string128 Map		:	0xC9B7708, 0x90, 0x14;							//First map is st01_000_Home1FGarden_00 (UTF-16 String), same offsets as old updates
-	string128 Event		:	0xC9B7728, 0x58, 0x68, 0x40, 0x30, 0x14;		//AOB Scan 63 00 31 00 30 00 65 00 30 00 30 00 31 00 5F 00 30 00 30 00 00 00 00 00 00 00 00 00 and pointer scan the one closest to the top with same offsets as old updates
+	string128 Event		:	0xC9B7728, 0x58, 0x68, 0x40, 0x30, 0x14;		//AOB Scan 63 00 31 00 30 00 65 00 30 00 30 00 31 00 5F 00 30 00 30 00 00 00 00 00 00 00 00 00 one of these is the correct one
 }
 
 state("re8", "WW_1.4")
@@ -331,6 +344,9 @@ init
 			break;
 		case (617246720):
 			version = "WW_1.6";
+			break;
+		case (631308288):
+			version = "WW_1.7";
 			break;
 		case (640962560):
 		default:
