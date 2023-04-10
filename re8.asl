@@ -14,8 +14,8 @@
 
 state("re8", "WW_1.8")
 {
-	byte LoadState		:	0xC4A17C8, 0xE1;									//All -50E1F0 base address from 1.7 except CutsceneState
-	byte PauseState		:	0xC4F1468, 0x48;								
+	byte LoadState		:	0xC4A17C8, 0xE1;									//All -50E1F0 base address from 1.7 except CutsceneState and PauseState
+	byte PauseState		:	0xC4EB0C8, 0x48;								
 	byte TimeBleed		:	0xC4A17C0, 0x84;								
 	uint CutsceneState	:	0xC49F240, 0x10;								
 	uint NewestItemHash	:	0xC4A1630, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
