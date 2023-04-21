@@ -363,6 +363,7 @@ init
 			version = "WW_1.7";
 			break;
 		case (218947584):
+		case (219156480):
 			version = "WW_1.8";
 			break;
 		case (640962560):
