@@ -12,6 +12,19 @@
 --------------------------------------
 */
 
+state("re8", "WW_1.9")
+{
+	byte LoadState		:	0xC4A2828, 0xE1;									//All +1060 base address from 1.8 except CutsceneState and PauseState
+	byte PauseState		:	0xC4EC0E8, 0x48;									// +1020 Base address from 1.8								
+	byte TimeBleed		:	0xC4A2820, 0x84;								
+	uint CutsceneState	:	0xC4A02C0, 0x10;									// +1080 Base address from 1.8
+	uint NewestItemHash	:	0xC4A1630, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	string128 Chapter	:	0xC4A2828, 0x60, 0x14;							
+	string128 View		:	0xC4A2828, 0x58, 0x14;							
+	string128 Map		:	0xC4A2588, 0x90, 0x14;							
+	string128 Event		:	0xC4A25A8, 0x58, 0x68, 0x40, 0x30, 0x14;
+}
+
 state("re8", "WW_1.8")
 {
 	byte LoadState		:	0xC4A17C8, 0xE1;									//All -50E1F0 base address from 1.7 except CutsceneState and PauseState
@@ -23,7 +36,6 @@ state("re8", "WW_1.8")
 	string128 View		:	0xC4A17C8, 0x58, 0x14;							
 	string128 Map		:	0xC4A1528, 0x90, 0x14;							
 	string128 Event		:	0xC4A1548, 0x58, 0x68, 0x40, 0x30, 0x14;
-	
 }
 
 state("re8", "WW_1.7")
@@ -317,9 +329,6 @@ startup
 	settings.Add("c103e300_00", false, "Reach Crystal");
 	settings.Add("c103e310_00", false, "Miranda Start");
 	settings.Add("c103e320_00", false, "Miranda Finish");
-	
-	
-	
 }
 
 init
@@ -365,6 +374,9 @@ init
 		case (218947584):
 		case (219156480):
 			version = "WW_1.8";
+			break;
+		case (219160576):
+			version = "WW_1.9";
 			break;
 		case (640962560):
 		default:
