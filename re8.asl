@@ -15,67 +15,15 @@
 
 state("re8", "WW_1.9")
 {
-	byte LoadState		:	0xC4A2828, 0xE1;									//All +1060 base address from 1.8 except CutsceneState and PauseState
-	byte PauseState		:	0xC4EC0E8, 0x48;									// +1020 Base address from 1.8								
-	byte TimeBleed		:	0xC4A2820, 0x84;								
-	uint CutsceneState	:	0xC4A02C0, 0x10;									// +1080 Base address from 1.8
-	uint NewestItemHash	:	0xC4A2690, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xC4A2828, 0x60, 0x14;							
-	string128 View		:	0xC4A2828, 0x58, 0x14;							
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;							
-	string128 Event		:	0xC4A25A8, 0x58, 0x68, 0x40, 0x30, 0x14;
-}
-
-state("re8", "WW_1.8")
-{
-	byte LoadState		:	0xC4A17C8, 0xE1;									//All -50E1F0 base address from 1.7 except CutsceneState and PauseState
-	byte PauseState		:	0xC4EB0C8, 0x48;								
-	byte TimeBleed		:	0xC4A17C0, 0x84;								
-	uint CutsceneState	:	0xC49F240, 0x10;								
-	uint NewestItemHash	:	0xC4A1630, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xC4A17C8, 0x60, 0x14;							
-	string128 View		:	0xC4A17C8, 0x58, 0x14;							
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;						
-	string128 Event		:	0xC4A1548, 0x58, 0x68, 0x40, 0x30, 0x14;
-}
-
-state("re8", "WW_1.7")
-{
-	byte LoadState		:	0xC9AF9B8, 0xE1;									//All +9000 base address from 1.6
-	byte PauseState		:	0xC9FF658, 0x48;								
-	byte TimeBleed		:	0xC9AF9B0, 0x84;								
-	uint CutsceneState	:	0xC9AF1E8, 0x10;								
-	uint NewestItemHash	:	0xC9AF820, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xC9AF9B8, 0x60, 0x14;							
-	string128 View		:	0xC9AF9B8, 0x58, 0x14;							
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;						
-	string128 Event		:	0xC9AF738, 0x58, 0x68, 0x40, 0x30, 0x14;		
-}
-
-state("re8", "WW_1.6")
-{
-	byte LoadState		:	0xC9A69B8, 0xE1;								
-	byte PauseState		:	0xC9F6658, 0x48;								
-	byte TimeBleed		:	0xC9A69B0, 0x84;								
-	uint CutsceneState	:	0xC9A61E8, 0x10;								
-	uint NewestItemHash	:	0xC9A6820, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xC9A69B8, 0x60, 0x14;							
-	string128 View		:	0xC9A69B8, 0x58, 0x14;							
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;						
-	string128 Event		:	0xC9A6738, 0x58, 0x68, 0x40, 0x30, 0x14;		
-}
-
-state("re8", "WW_1.5")
-{
-	byte LoadState		:	0xC9B79A8, 0xE1;								//Same pointer as View & same offsets as old updates
-	byte PauseState		:	0xCA07648, 0x48;								//Does not change until you gain control of Ethan again
-	byte TimeBleed		:	0xC9B79A0, 0x84;								//Fixes Some Timebleed in Shadows of Rose. 2 in game 3 during cutscene after Eveline in Ethans House
-	uint CutsceneState	:	0xC9B71D8, 0x10;								//15 in cutscene, 2 not in cutscene
-	uint NewestItemHash	:	0xC9B7810, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;	//Find ammo count and pointerscan with 4C as final offset. Find closest pointers and then change them to the ones to the left of here from old updates
-	string128 Chapter	:	0xC9B79A8, 0x60, 0x14;							//Same pointer as View & same offsets as old updates
-	string128 View		:	0xC9B79A8, 0x58, 0x14;							//AOB Scan 4D 00 61 00 78 00 48 00 44 00 52 00 42 00 72 00 69 00 67 00 68 00 74 00 6E 00 65 00 73 00 73 when on the main menu, then move address forward until it says MainMenu
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;			//First map is st01_000_Home1FGarden_00 (UTF-16 String), same offsets as old updates
-	string128 Event		:	0xC9B7728, 0x58, 0x68, 0x40, 0x30, 0x14;		//AOB Scan 63 00 31 00 30 00 65 00 30 00 30 00 31 00 5F 00 30 00 30 00 00 00 00 00 00 00 00 00 one of these is the correct one
+	byte LoadState		:	0xC4A2828, 0xE1;									//Same pointer as View & same offsets as old updates
+	byte PauseState		:	0xC4EC0E8, 0x48;									//Does not change until you gain control of Ethan again						
+	byte TimeBleed		:	0xC4A2820, 0x84;									//Fixes Some Timebleed in Shadows of Rose. 2 in game 3 during cutscene after Eveline in Ethans House
+	uint CutsceneState	:	0xC4A02C0, 0x10;									//15 in cutscene, 2 not in cutscene
+	uint NewestItemHash	:	0xC4A2690, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;		//Find ammo count and pointerscan with 4C as final offset. Find closest pointers and then change them to the ones to the left of here from old updates
+	string128 Chapter	:	0xC4A2828, 0x60, 0x14;								//Same pointer as View & same offsets as old updates
+	string128 View		:	0xC4A2828, 0x58, 0x14;								//AOB Scan 4D 00 61 00 78 00 48 00 44 00 52 00 42 00 72 00 69 00 67 00 68 00 74 00 6E 00 65 00 73 00 73 when on the main menu, then move address forward until it says MainMenu
+	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;				//First map is st01_000_Home1FGarden_00 (UTF-16 String), same offsets as old updates			
+	string128 Event		:	0xC4A25A8, 0x58, 0x68, 0x40, 0x30, 0x14;			//AOB Scan 63 00 31 00 30 00 65 00 30 00 30 00 31 00 5F 00 30 00 30 00 00 00 00 00 00 00 00 00 one of these is the correct one
 }
 
 state("re8", "WW_1.4")
@@ -87,80 +35,8 @@ state("re8", "WW_1.4")
 	uint NewestItemHash	:	0xA06C8E0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
 	string128 Chapter	:	0xA06CA58, 0x60, 0x14;
 	string128 View		:	0xA06CA58, 0x58, 0x14;
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;
+	string128 Map		:	0xA06C7E0, 0x180, 0x248, 0x28, 0x14;
 	string128 Event		:	0xA03D388, 0x58, 0x68, 0x40, 0x30, 0x14;
-}
-
-state("re8", "WW_1.3")
-{
-	byte LoadState		:	0xA06B968, 0xE1;
-	byte PauseState		:	0xA0572E8, 0x48;
-	uint CutsceneState	:	0xA02F5E8, 0x10;
-	uint NewestItemHash	:	0xA06B7F0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xA06B968, 0x60, 0x14;
-	string128 View		:	0xA06B968, 0x58, 0x14;
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;
-	string128 Event		:	0xA03C298, 0x58, 0x68, 0x40, 0x30, 0x14;
-}
-
-state("re8", "WW_1.2")
-{
-	byte LoadState		:	0xA06B968, 0xE1;
-	byte PauseState		:	0xA0572E8, 0x48;
-	uint CutsceneState	:	0xA02F5E8, 0x10;
-	uint NewestItemHash	:	0xA06B7F0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xA06B968, 0x60, 0x14;
-	string128 View		:	0xA06B968, 0x58, 0x14;
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;
-	string128 Event		:	0xA03C298, 0x58, 0x68, 0x40, 0x30, 0x14;
-}
-
-state("re8", "WW_1.1")
-{
-	byte LoadState		:	0xA069998, 0xE1;
-	byte PauseState		:	0xA055318, 0x48;
-	uint CutsceneState	:	0xA02D618, 0x10;
-	uint NewestItemHash	:	0xA06A5B8, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xA069998, 0x60, 0x14;
-	string128 View		:	0xA069998, 0x58, 0x14;
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;
-	string128 Event		:	0xA03A2B8, 0x58, 0x68, 0x40, 0x30, 0x14;
-}
-
-state("re8", "WW_1.0")
-{
-	byte LoadState		:	0xA1B1DE8, 0xE1;
-	byte PauseState		:	0xA19E058, 0x48;
-	uint CutsceneState	:	0x0A17FAC8, 0x10;
-	uint NewestItemHash	:	0xA1B29F0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xA1B8FB0, 0x60, 0x14;
-	string128 View		:	0xA1B8FB0, 0x58, 0x14;
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;
-	string128 Event		:	0xA182B38, 0x58, 0x68, 0x40, 0x30, 0x14;
-}
-
-state("re8", "CeroD_1.0")
-{
-	byte LoadState		:	0xA1B3DE8, 0xE1;
-	byte PauseState 	:	0xA1A0058, 0x48;
-	uint CutsceneState	:	0xA181AC8, 0x10;
-	uint NewestItemHash :	0xA1B49F0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xA1BAFB0, 0x60, 0x14;
-	string128 View		:	0xA1BAFB0, 0x58, 0x14;
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;
-	string128 Event		:	0xA184B38, 0x58, 0x68, 0x40, 0x30, 0x14;
-}
-
-state("re8", "Promo_1.0")
-{
-	byte LoadState		:	0xA1B2E18, 0xE1;
-	byte PauseState		:	0xA19F088, 0x48;
-	uint CutsceneState	:	0xA180AF8, 0x10;
-	uint NewestItemHash	:	0xA1B3A20, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
-	string128 Chapter	:	0xA1B9FE0, 0x60, 0x14;
-	string128 View		:	0xA1B9FE0, 0x58, 0x14;
-	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;
-	string128 Event		:	0xA183B68, 0x58, 0x68, 0x40, 0x30, 0x14;
 }
 
 startup
@@ -323,13 +199,10 @@ split
 	}
 	
 	// Map splits
-	if (current.Map != old.Map)
-	{
-		if (settings[current.Map] && !vars.completedSplits.Contains(current.Map))
-		{
-			vars.completedSplits.Add(current.Map);
-			return true;
-		}
+	if (settings[current.Map] && !vars.completedSplits.Contains(current.Map)){
+		vars.completedSplits.Add(current.Map);
+		return true;
+	}
 		
 		// Propellerman Splits
 		else if (current.Chapter == "Chapter2_5")
