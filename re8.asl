@@ -13,6 +13,31 @@
 --------------------------------------
 */
 
+state("re8", "WW_1.9")
+{
+	byte LoadState		:	0xC4A2828, 0xE1;									//Same pointer as View & same offsets as old updates
+	byte PauseState		:	0xC4EC0E8, 0x48;									//Does not change until you gain control of Ethan again						
+	byte TimeBleed		:	0xC4A2820, 0x84;									//Fixes Some Timebleed in Shadows of Rose. 2 in game 3 during cutscene after Eveline in Ethans House
+	uint CutsceneState	:	0xC4A02C0, 0x10;									//15 in cutscene, 2 not in cutscene
+	uint NewestItemHash	:	0xC4A2690, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;		//Find ammo count and pointerscan with 4C as final offset. Find closest pointers and then change them to the ones to the left of here from old updates
+	string128 Chapter	:	0xC4A2828, 0x60, 0x14;								//Same pointer as View & same offsets as old updates
+	string128 View		:	0xC4A2828, 0x58, 0x14;								//AOB Scan 4D 00 61 00 78 00 48 00 44 00 52 00 42 00 72 00 69 00 67 00 68 00 74 00 6E 00 65 00 73 00 73 when on the main menu, then move address forward until it says MainMenu
+	string128 Map		:	0xC4A2588, 0x180, 0x248, 0x28, 0x14;				//First map is st01_000_Home1FGarden_00 (UTF-16 String), same offsets as old updates			
+	string128 Event		:	0xC4A25A8, 0x58, 0x68, 0x40, 0x30, 0x14;			//AOB Scan 63 00 31 00 30 00 65 00 30 00 30 00 31 00 5F 00 30 00 30 00 00 00 00 00 00 00 00 00 one of these is the correct one
+}
+
+state("re8", "WW_1.4")
+{
+	byte LoadState		:	0xA06CA58, 0xE1;
+	byte PauseState		:	0xA0583D8, 0x48;
+	byte gameState		:	0xA067CB8, 0x8;
+	uint CutsceneState	:	0xA0306D8, 0x10;
+	uint NewestItemHash	:	0xA06C8E0, 0x60, 0x18, 0x10, 0x20, 0x58, 0x3C;
+	string128 Chapter	:	0xA06CA58, 0x60, 0x14;
+	string128 View		:	0xA06CA58, 0x58, 0x14;
+	string128 Map		:	0xA06C7E0, 0x180, 0x248, 0x28, 0x14;
+	string128 Event		:	0xA03D388, 0x58, 0x68, 0x40, 0x30, 0x14;
+}
 
 startup
 {
