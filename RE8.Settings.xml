@@ -1,5 +1,6 @@
 <Settings>
     <Setting Id="Main"  Label="Main Game" State="false">
+	    	<Setting Id="meme" Label="Enable No Intro (VoS only)" State="false"/>
 		<Setting Id="village" Label="Winters' House and Village Before Castle">
 			<Setting Id="c10e050_00" Label="Put Rose to Bed" State="false"/>
 			<Setting Id="c21e000_00" Label="Car Crash Site" State="false"/>
