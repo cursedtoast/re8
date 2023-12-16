@@ -1,0 +1,151 @@
+<Settings>
+    <Setting Id="Main"  Label="Main Game" State="false">
+	    	<Setting Id="meme" Label="Enable No Intro (VoS only)" State="false"/>
+		<Setting Id="village" Label="Winters' House and Village Before Castle">
+			<Setting Id="c10e050_00" Label="Put Rose to Bed" State="false"/>
+			<Setting Id="c21e000_00" Label="Car Crash Site" State="false"/>
+			<Setting Id="1664342338" Label="Bolt Cutters" State="false"/>
+			<Setting Id="arrowKnee" Label="Arrow to the Knee" State="false"/>
+			<Setting Id="3619364444" Label="Maiden Crest" State="false"/>
+			<Setting Id="3219462766" Label="Screwdriver" State="false"/>
+			<Setting Id="1132688171" Label="Demon Crest" State="false"/>
+			<Setting Id="c21e510_00" Label="Meet Heisenburg" State="false"/>
+		</Setting>
+		<Setting Id="castle" Label="Lady Dimitrescu's Castle">
+			<Setting Id="st11_010_EntranceHallB_In2F" Label="Reach Castle" State="false"/>
+			<Setting Id="2183898626" Label="Maroon Eye Ring" State="false"/>
+			<Setting Id="1787578325" Label="Maroon Eye" State="false"/>
+			<Setting Id="st11_066_PrisonB_In1B" Label="Reached Prison" State="false"/>
+			<Setting Id="2685023068" Label="Sanguis Virginis (Wine Bottle)" State="false"/>
+			<Setting Id="1354786552" Label="Courtyard Key" State="false"/>
+			<Setting Id="st11_092_Courtyard_Out" Label="Reached Courtyard" State="false"/>
+			<Setting Id="st11_074_BasementA_In1B" Label="Reached Distillery" State="false"/>
+			<Setting Id="1738775830" Label="Dimitrescu's Key" State="false"/>
+			<Setting Id="418018598" Label="Iron Insignia Key" State="false"/>
+			<Setting Id="3513834249" Label="Mask of Sorrow" State="false"/>
+			<Setting Id="c22e550_00" Label="Ethan Loses Hand" State="false"/>
+			<Setting Id="2365661828" Label="Mask of Joy" State="false"/>
+			<Setting Id="st11_094_Roof_Out" Label="Reached Roof" State="false"/>
+			<Setting Id="314002296" Label="Mask of Rage" State="false"/>
+			<Setting Id="1344029762" Label="Mask of Pleasure" State="false"/>
+			<Setting Id="3784287352" Label="Mounted Animal Skull" State="false"/>
+			<Setting Id="3237773355" Label="Animal Skull" State="false"/>
+			<Setting Id="c22e720_00" Label="Lady D. Boss Started" State="false"/>
+			<Setting Id="Cc22e800_00" Label="Lady D. Defeated" State="false"/>
+			<Setting Id="2309731541" Label="Dirty Flask (Head)" State="false"/>
+		</Setting>
+		<Setting Id="villageTwo" Label="Village Before Beneviento">
+			<Setting Id="808039580" Label="Winged Key" State="false"/>
+			<Setting Id="c26e200_00" Label="Meet The Duke" State="false"/>
+			<Setting Id="1093531362" Label="Jack Handle" State="false"/>
+			<Setting Id="185799830" Label="Four-Winged Key" State="false"/>
+			<Setting Id="c26e250_00" Label="Meet Duke Again After Collecting Key" State="false"/>
+		</Setting>
+		<Setting Id="dollhouse" Label="Beneviento's Dollhouse">
+			<Setting Id="c23e050_00" Label="Meet Mia In the Graveyard" State="false"/>
+			<Setting Id="st14_001_Hall_In1F" Label="Reached Beneviento House" State="false"/>
+			<Setting Id="2896087978" Label="Blood Covered Ring" State="false"/>
+			<Setting Id="2573570207" Label="Silver Key" State="false"/>
+			<Setting Id="3856576850" Label="Winding Key" State="false"/>
+			<Setting Id="895810843" Label="Wedding Ring" State="false"/>
+			<Setting Id="2925641544" Label="Tweezers" State="false"/>
+			<Setting Id="3542466670" Label="Film" State="false"/>
+			<Setting Id="2554874516" Label="Scissors" State="false"/>
+			<Setting Id="2564145014" Label="Brass Medallion" State="false"/>
+			<Setting Id="1042056128" Label="Breaker Box Key" State="false"/>
+			<Setting Id="988104371" Label="Relief of a Child" State="false"/>
+			<Setting Id="709500517" Label="Fuse" State="false"/>
+			<Setting Id="c23e660_00" Label="Escaped Baby" State="false"/>
+			<Setting Id="360286557" Label="Four-Winged Unborn Key" State="false"/>
+			<Setting Id="2563213816" Label="Leg Flask" State="false"/>
+		</Setting>
+		<Setting Id="fish" Label="Moreau's Reservoir">
+			<Setting Id="c26e500_00" Label="Ambushed By Werewolf" State="false"/>
+			<Setting Id="3720810444" Label="Arm Flask" State="false"/>
+			<Setting Id="2844148845" Label="Boat Key" State="false"/>
+			<Setting Id="c24e200_02" Label="Meet Chris In the Hut" State="false"/>
+			<Setting Id="1142718375" Label="Crank" State="false"/>
+			<Setting Id="c24e810_00" Label="Moreau (the best) Defeated" State="false"/>
+			<Setting Id="847933194" Label="Six-Winged Unborn Key" State="false"/>
+		</Setting>
+		<Setting Id="strong" Label="Lycan's Stronghold">
+			<Setting Id="st10_260_UpperCemetery_Etc" Label="Enter Stronghold Base" State="false"/>
+			<Setting Id="st10_244_BranchCastle_In1F" Label="Enter Stronghold" State="false"/>
+			<Setting Id="st10_263_BranchCastelUnder3_Out" Label="Urias Start" State="false"/>
+			<Setting Id="719654765" Label="Torso Flask" State="false"/>
+			<Setting Id="158765264" Label="Giant's Chalice" State="false"/>
+		</Setting>
+		<Setting Id="walterwhite" Label="Heisenberg's Factory">
+			<Setting Id="c25e210_00" Label="Heisenberg Rose Discussion" State="false"/>
+			<Setting Id="propellerOne" Label="Escaped Sturm (First Time)" State="false"/>
+			<Setting Id="st15_060_CastingMachineRoom_In3B" Label="Reach Casting Machine Room" State="false"/>
+			<Setting Id="1911895058" Label="Relief Mold" State="false"/>
+			<Setting Id="1152567186" Label="Relief of a Horse" State="false"/>
+			<Setting Id="propellerTwo" Label="Escaped Sturm (Second Time)" State="false"/>
+			<Setting Id="1629499072" Label="Cog Mold" State="false"/>
+			<Setting Id="1858058345" Label="Large Cod" State="false"/>
+			<Setting Id="st15_030_BigFanArea_In2B" Label="Reached Big Fan" State="false"/>
+			<Setting Id="1876186812" Label="Key Mold" State="false"/>
+			<Setting Id="4041096499" Label="Heisenberg's Key" State="false"/>
+			<Setting Id="controlRoom" Label="Reach Control Room (After Killing Sturm)" State="false"/>
+			<Setting Id="c25e710_00" Label="Got on Tank" State="false"/>
+		</Setting>
+		<Setting Id="chris" Label="Chris' Section">
+			<Setting Id="chrisStart" Label="Chris Start" State="false"/>
+			<Setting Id="c31e300_00" Label="Reached Target Location" State="false"/>
+			<Setting Id="c31e500_01" Label="Urias Strajer Start" State="false"/>
+			<Setting Id="c31e600_00" Label="Reached Megamycete" State="false"/>
+			<Setting Id="c31e800_00" Label="Chris End" State="false"/>
+		</Setting>
+		<Setting Id="finale" Label="Ethan's Finale">
+			<Setting Id="c32e150_00" Label="Miranda Start" State="false"/>
+			<Setting Id="c32e400_00" Label="Miranda End (Final Split)" State="false"/>
+		</Setting>
+	</Setting>
+	<Setting Id="Rose"  Label="Shadows of Rose" State="false">
+		<Setting Id="Dungeon" Label="The Duke's Dungeons">
+			<Setting Id="2508552683" Label="Cell Key" State="false"/>
+			<Setting Id="3110932807" Label="Switch Handle" State="false"/>
+			<Setting Id="c101e060_00" Label="Escape Dungeon" State="false"/>
+		</Setting>
+		<Setting Id="DukeCas" Label="The Duke's Castle">
+			<Setting Id="1318941960" Label="Bolt Cutters" State="false"/>
+			<Setting Id="3926554463" Label="RW-Variant Flask 1" State="false"/>
+			<Setting Id="4184743477" Label="Bronze Mask" State="false"/>
+			<Setting Id="115291557" Label="RW-Variant Flask 2" State="false"/>
+			<Setting Id="1467618523" Label="Monocular Key" State="false"/>
+			<Setting Id="298520404" Label="Silver Mask" State="false"/>
+			<Setting Id="2307002485" Label="Snake Painting" State="false"/>
+			<Setting Id="3483404595" Label="Triocular Key" State="false"/>
+			<Setting Id="2809339309" Label="Gold Mask" State="false"/>
+			<Setting Id="st21_022_StorageRoom_In2F" Label="Escape Jail Trap" State="false"/>
+			<Setting Id="c101e200_01" Label="Urias Wannabe Start" State="false"/>
+			<Setting Id="99244898" Label="RW-Variant Flask 3" State="false"/>
+			<Setting Id="c101e250_00" Label="Urias Wannabe End" State="false"/>
+		</Setting>
+		<Setting Id="Doll" Label="Eveline's Dollhouse">
+			<Setting Id="st24_011_ElevatorHall_In1B" Label="Enter Evelines Dollhouse" State="false"/>
+			<Setting Id="3628065826" Label="Scissors" State="false"/>
+			<Setting Id="417473928" Label="Relief of a Child" State="false"/>
+			<Setting Id="1290304315" Label="Catherine Doll" State="false"/>
+			<Setting Id="3115585574" Label="Jimmy's Room Key" State="false"/>
+			<Setting Id="2962654202" Label="Jimmy Doll" State="false"/>
+			<Setting Id="385992936" Label="Black Haired Doll" State="false"/>
+			<Setting Id="3745882423" Label="Breaker Box Key" State="false"/>
+			<Setting Id="3959031061" Label="Fuse Map" State="false"/>
+			<Setting Id="2553722918" Label="Fuse" State="false"/>
+			<Setting Id="c102e050_00" Label="Down The Elevator" State="false"/>
+			<Setting Id="c102e070_00" Label="Reach Large Bedroom" State="false"/>
+			<Setting Id="c102e100_00" Label="Escape Large Mia Doll" State="false"/>
+			<Setting Id="954750291" Label="Drawer Key" State="false"/>
+			<Setting Id="4283333959" Label="RW-Variant Flask 4" State="false"/>
+			<Setting Id="c102e250_00" Label="Beat Eveline" State="false"/>
+		</Setting>
+		<Setting Id="Vill" Label="Miranda's Village">
+			<Setting Id="c103e070_01" Label="Reach Cave" State="false"/>
+			<Setting Id="c103e300_00" Label="Reach Crystal" State="false"/>
+			<Setting Id="c103e310_00" Label="Miranda Start" State="false"/>
+			<Setting Id="c103e320_00" Label="Miranda Finish" State="false"/>
+		</Setting>
+	</Setting>
+</Settings>

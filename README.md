@@ -2,7 +2,7 @@
 
 Autosplits and load removal for Resident Evil Village.
 
-Care to buy me a coffee?
+Feel free to buy Toast a coffee, he worked hard on this splitter.
 https://streamlabs.com/cursedtoast/tip
 
 # Instructions
@@ -27,3 +27,4 @@ Make sure you have the split checkmarked as explained above. If that doesn't wor
 
 # Credits
 Special thanks to Squirrelies and VGR for collaborating in finding memory values.
+Special thanks to CursedToast for all of his work on this splitter since release.
